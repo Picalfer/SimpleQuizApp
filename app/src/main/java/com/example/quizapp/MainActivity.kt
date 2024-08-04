@@ -2,6 +2,8 @@ package com.example.quizapp
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -35,7 +37,8 @@ class MainActivity : AppCompatActivity() {
         val btnTrue = findViewById<Button>(R.id.btnTrue)
         val btnFalse = findViewById<Button>(R.id.btnFalse)
         factText = findViewById<TextView>(R.id.factText)
-        val btnNext = findViewById<Button>(R.id.btnNext)
+        val btnNext = findViewById<ImageButton>(R.id.btnNext)
+        val btnPrev = findViewById<ImageButton>(R.id.btnPrev)
 
         nextFact()
 
@@ -50,10 +53,23 @@ class MainActivity : AppCompatActivity() {
         btnNext.setOnClickListener {
             nextFact()
         }
+
+        btnPrev.setOnClickListener {
+            prevFact()
+        }
     }
 
     private fun nextFact() {
         currentIndex = (currentIndex + 1) % factList.size
+        updateFact()
+    }
+
+    private fun prevFact() {
+        currentIndex = (currentIndex - 1 + factList.size) % factList.size
+        updateFact()
+    }
+
+    private fun updateFact() {
         currentFact = factList[currentIndex]
         factText.text = currentFact.getText()
     }
