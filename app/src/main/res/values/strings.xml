@@ -2,7 +2,10 @@
     <string name="app_name">QuizApp</string>
     <string name="true_text">Правда</string>
     <string name="false_text">Неправда</string>
+    <string name="next_text">Следующий факт</string>
     <string name="fact1">Земля плоская</string>
+    <string name="fact2">У осьминога 8 ног</string>
+    <string name="fact3">1 кг гвоздей тяжелее 1 кг перьев</string>
     <string name="correct_toast">Верно!</string>
     <string name="wrong_toast">Неверно!</string>
 </resources>

@@ -10,10 +10,9 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/questionText"
+        android:id="@+id/factText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/fact1"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,4 +40,11 @@
             android:layout_margin="5dp"
             android:text="@string/false_text" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/next_text" />
 </LinearLayout>
