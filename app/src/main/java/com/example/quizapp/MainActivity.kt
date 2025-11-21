@@ -1,5 +1,6 @@
 package com.example.quizapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
@@ -57,6 +58,9 @@ class MainActivity : AppCompatActivity() {
         btnPrev.setOnClickListener {
             prevFact()
         }
+
+        startActivity(Intent(this, ChetActivity::class.java))
+        finish()
     }
 
     private fun nextFact() {
